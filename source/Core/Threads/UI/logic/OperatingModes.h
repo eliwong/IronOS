@@ -21,7 +21,7 @@ extern "C" {
 #include "string.h"
 #ifdef POW_PD
 #include "USBPD.h"
-#include "pd.h"
+#include "source\Core\Drivers\usb-pd\include\pd.h"
 #endif
 
 enum class OperatingMode {
