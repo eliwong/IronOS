@@ -13,6 +13,7 @@
 #include "main.hpp"
 #include <IRQ.h>
 #include "USBPD.h"
+#include "WS2812.h"
 
 volatile uint16_t    PWMSafetyTimer   = 0;
 volatile uint8_t     pendingPWM       = 0;

@@ -1,5 +1,5 @@
 ifndef model
-model:=Pinecil
+model:=S60
 endif
 
 ALL_MINIWARE_MODELS=TS100 TS80 TS80P TS101

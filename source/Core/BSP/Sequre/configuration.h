@@ -32,7 +32,7 @@
 /**
  * Blink the temperature on the cooling screen when its > 50C
  */
-#define COOLING_TEMP_BLINK 0 // 0: Disable 1: Enable
+#define COOLING_TEMP_BLINK 1 // 0: Disable 1: Enable
 
 /**
  * How many seconds/minutes we wait until going to sleep/shutdown.
@@ -132,11 +132,19 @@
 #define POWER_LIMIT_STEPS  5
 #define OP_AMP_GAIN_STAGE  536
 #define TEMP_uV_LOOKUP_S60
-#define USB_PD_VMAX              12 // Maximum voltage for PD to negotiate
+#define USB_PD_VMAX              48 // Maximum voltage for PD to negotiate
 #define THERMAL_RUNAWAY_TIME_SEC 20
 #define THERMAL_RUNAWAY_TEMP_C   10
 
 #define HARDWARE_MAX_WATTAGE_X10 600
+
+// #define OP_AMP_Rf_Pinecil  750 * 1000 // 750  Kilo-ohms -> From schematic, R1
+// #define OP_AMP_Rin_Pinecil 2370       // 2.37 Kilo-ohms -> From schematic, R2
+
+// #define OP_AMP_GAIN_STAGE_PINECIL (1 + (OP_AMP_Rf_Pinecil / OP_AMP_Rin_Pinecil))
+
+#define ADC_MAX_READING (4096 * 8) // Maximum reading of the adc
+#define ADC_VDD_MV      3300       // ADC max reading millivolts
 
 #define TIP_THERMAL_MASS    10  // X10 watts to raise 1 deg C in 1 second
 #define TIP_THERMAL_INERTIA 128 // We use a large inertia value to smooth out the drive to the tip since its stupidly sensitive
@@ -154,8 +162,8 @@
 #define POW_QC                    1                         // Supported features
 #define POW_DC                    1                         // Supported features
 #define POW_QC_20V                1                         // Supported features
-#define ENABLE_QC2                 1
-#define MAG_SLEEP_SUPPORT          1
+#define ENABLE_QC2                1
+#define MAG_SLEEP_SUPPORT         1
 
 #define DEBUG_POWER_MENU_BUTTON_B 1
 #define HAS_POWER_DEBUG_MENU
