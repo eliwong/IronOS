@@ -143,10 +143,20 @@
 
 #define TIP_RESISTANCE 20 //(actually 2.5 ish but we need to be more conservative on pwm'ing watt limit) x10 ohms
 
-#define OLED_128x32
+#define ACCEL_LIS
+#define HALL_SENSOR
+#define HALL_SI7210
+#define OLED_96x16  1
 #define GPIO_VIBRATION
-#define POW_PD_EXT                1
-#define USB_PD_EPR_WATTAGE        0 /*No EPR*/
+#define POW_PD                    1                         // Supported features
+#define POW_PD_EXT                0
+#define USB_PD_EPR_WATTAGE        240 /*No EPR*/
+#define POW_QC                    1                         // Supported features
+#define POW_DC                    1                         // Supported features
+#define POW_QC_20V                1                         // Supported features
+#define ENABLE_QC2                 1
+#define MAG_SLEEP_SUPPORT          1
+
 #define DEBUG_POWER_MENU_BUTTON_B 1
 #define HAS_POWER_DEBUG_MENU
 #define TEMP_NTC
